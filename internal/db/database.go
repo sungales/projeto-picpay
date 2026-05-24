@@ -27,7 +27,7 @@ func Connect() (*sql.DB, error) {
 		log.Fatal("não foi possivel conectar ao banco de dados: ", err)
 	}
 
-	file, err := os.ReadFile("setup.sql")
+	file, err := os.ReadFile("internal/db/migrations/setup.sql")
 	if err != nil {
 		log.Fatal("não foi possivel ler o arquivo SQL: ", err)
 	}
